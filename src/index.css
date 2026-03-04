@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Noto Serif TC", serif;
+  --font-sans: "Inter", "Noto Sans TC", sans-serif;
+  
+  --color-mazu-red: #9b2226;
+  --color-mazu-gold: #ca6702;
+  --color-mazu-blue: #005f73;
+  --color-mazu-sand: #e9d8a6;
+  --color-mazu-dark: #0a0908;
+  --color-mazu-light: #fdfcdc;
+
+  --animate-bounce-slow: bounce-slow 3s infinite ease-in-out;
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 34, 38, 0.3);
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 34, 38, 0.6);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fcfbf8;
+  color: #1a1a1a;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
